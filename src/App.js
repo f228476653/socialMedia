@@ -1,5 +1,6 @@
 import React, {useEffect} from 'react';
 import Login from './components/user/Login'
+import ForgetPwd from './components/user/ForgetPwd'
 import Sidebar from './components/left/Sidebar'
 import Main from './components/middle/Main'
 import Embed from './components/right/Embed'
@@ -10,7 +11,6 @@ import { useStateValue } from "./utils/StateProvider";
 
 function App() {
   const [{}, dispatch] = useStateValue();
-
   useEffect(() => {
     // check if session exist
     // const session = localStorage.getItem('myData');
@@ -55,6 +55,9 @@ function App() {
           </Route>
           <Route path="/profile">
           <Login />
+          </Route>
+          <Route path="/forgetPwd">
+          <ForgetPwd />
           </Route>
           <Route path="/">
             <Login />

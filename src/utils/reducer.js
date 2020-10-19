@@ -1,6 +1,7 @@
 export const initialState = {
     user :  null,
-    token: null
+    token: null,
+    showSignUp : false
 }
 
 const reducer =(state, action)=>{
@@ -13,6 +14,10 @@ const reducer =(state, action)=>{
         case 'SET_TOKEN':
             return {...state,
             taken :action.token,
+        }
+        case 'SET_SHOW_SIGN_UP':
+            return {...state,
+            showSignUp :action.showSignUp,
         }
         default:
             return state;
