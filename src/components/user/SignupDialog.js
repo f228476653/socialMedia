@@ -80,7 +80,9 @@ function SignupModal(props) {
             )}
           />
         }
-        
+        <Button href="#text-buttons" id="method" color="primary" onClick={() =>ToggleSignUp(signUpMethod.method)}>{signUpMethod.hint}</Button>
+        </DialogContent>
+        <DialogContent>
         <h4>Birth of date</h4>
         <DialogContentText>
             This will not be shown pubicly. Comfirm your own age, even if this account is for bussiness, a pet, or something else
@@ -98,7 +100,6 @@ function SignupModal(props) {
                 }
             )}
         />
-        <Button href="#text-buttons" id="method" color="primary" onClick={() =>ToggleSignUp(signUpMethod.method)}>{signUpMethod.hint}</Button>
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose} color="primary">
